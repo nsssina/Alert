@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D35AE9E02379B8DC00CF3F36 /* AddNewAlarmVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AE9DF2379B8DC00CF3F36 /* AddNewAlarmVC.swift */; };
+		D35AE9E22379CA2E00CF3F36 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AE9E12379CA2E00CF3F36 /* MainCollectionViewCell.swift */; };
+		D35AE9E92379E0F700CF3F36 /* Sahel-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AE9E42379E0F700CF3F36 /* Sahel-FD.ttf */; };
+		D35AE9EA2379E0F700CF3F36 /* Sahel-Black-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AE9E52379E0F700CF3F36 /* Sahel-Black-FD.ttf */; };
+		D35AE9EB2379E0F700CF3F36 /* Sahel-Light-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AE9E62379E0F700CF3F36 /* Sahel-Light-FD.ttf */; };
+		D35AE9EC2379E0F700CF3F36 /* Sahel-SemiBold-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AE9E72379E0F700CF3F36 /* Sahel-SemiBold-FD.ttf */; };
+		D35AE9ED2379E0F700CF3F36 /* Sahel-Bold-FD.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D35AE9E82379E0F700CF3F36 /* Sahel-Bold-FD.ttf */; };
 		D3A4AD772376E1BF00BDAD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4AD762376E1BF00BDAD14 /* AppDelegate.swift */; };
 		D3A4AD792376E1BF00BDAD14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4AD782376E1BF00BDAD14 /* SceneDelegate.swift */; };
 		D3A4AD7B2376E1BF00BDAD14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A4AD7A2376E1BF00BDAD14 /* ViewController.swift */; };
@@ -16,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D35AE9DF2379B8DC00CF3F36 /* AddNewAlarmVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewAlarmVC.swift; sourceTree = "<group>"; };
+		D35AE9E12379CA2E00CF3F36 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		D35AE9E42379E0F700CF3F36 /* Sahel-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sahel-FD.ttf"; sourceTree = "<group>"; };
+		D35AE9E52379E0F700CF3F36 /* Sahel-Black-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sahel-Black-FD.ttf"; sourceTree = "<group>"; };
+		D35AE9E62379E0F700CF3F36 /* Sahel-Light-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sahel-Light-FD.ttf"; sourceTree = "<group>"; };
+		D35AE9E72379E0F700CF3F36 /* Sahel-SemiBold-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sahel-SemiBold-FD.ttf"; sourceTree = "<group>"; };
+		D35AE9E82379E0F700CF3F36 /* Sahel-Bold-FD.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sahel-Bold-FD.ttf"; sourceTree = "<group>"; };
 		D3A4AD732376E1BF00BDAD14 /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A4AD762376E1BF00BDAD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A4AD782376E1BF00BDAD14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D35AE9E32379E0E900CF3F36 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D35AE9E52379E0F700CF3F36 /* Sahel-Black-FD.ttf */,
+				D35AE9E82379E0F700CF3F36 /* Sahel-Bold-FD.ttf */,
+				D35AE9E42379E0F700CF3F36 /* Sahel-FD.ttf */,
+				D35AE9E62379E0F700CF3F36 /* Sahel-Light-FD.ttf */,
+				D35AE9E72379E0F700CF3F36 /* Sahel-SemiBold-FD.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D3A4AD6A2376E1BF00BDAD14 = {
 			isa = PBXGroup;
 			children = (
@@ -59,10 +85,13 @@
 				D3A4AD762376E1BF00BDAD14 /* AppDelegate.swift */,
 				D3A4AD782376E1BF00BDAD14 /* SceneDelegate.swift */,
 				D3A4AD7A2376E1BF00BDAD14 /* ViewController.swift */,
+				D35AE9E12379CA2E00CF3F36 /* MainCollectionViewCell.swift */,
+				D35AE9DF2379B8DC00CF3F36 /* AddNewAlarmVC.swift */,
 				D3A4AD7C2376E1BF00BDAD14 /* Main.storyboard */,
 				D3A4AD7F2376E1C100BDAD14 /* Assets.xcassets */,
 				D3A4AD812376E1C100BDAD14 /* LaunchScreen.storyboard */,
 				D3A4AD842376E1C100BDAD14 /* Info.plist */,
+				D35AE9E32379E0E900CF3F36 /* Fonts */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -125,9 +154,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35AE9E92379E0F700CF3F36 /* Sahel-FD.ttf in Resources */,
+				D35AE9EB2379E0F700CF3F36 /* Sahel-Light-FD.ttf in Resources */,
+				D35AE9EC2379E0F700CF3F36 /* Sahel-SemiBold-FD.ttf in Resources */,
 				D3A4AD832376E1C100BDAD14 /* LaunchScreen.storyboard in Resources */,
 				D3A4AD802376E1C100BDAD14 /* Assets.xcassets in Resources */,
+				D35AE9EA2379E0F700CF3F36 /* Sahel-Black-FD.ttf in Resources */,
 				D3A4AD7E2376E1BF00BDAD14 /* Main.storyboard in Resources */,
+				D35AE9ED2379E0F700CF3F36 /* Sahel-Bold-FD.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +174,9 @@
 			files = (
 				D3A4AD7B2376E1BF00BDAD14 /* ViewController.swift in Sources */,
 				D3A4AD772376E1BF00BDAD14 /* AppDelegate.swift in Sources */,
+				D35AE9E22379CA2E00CF3F36 /* MainCollectionViewCell.swift in Sources */,
 				D3A4AD792376E1BF00BDAD14 /* SceneDelegate.swift in Sources */,
+				D35AE9E02379B8DC00CF3F36 /* AddNewAlarmVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +321,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
 				INFOPLIST_FILE = Alarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -303,6 +340,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 13;
 				INFOPLIST_FILE = Alarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,32 +11,52 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: - Outlets
-    
+      
     @IBOutlet weak var mainCvc: UICollectionView!
     @IBOutlet weak var addOut: UIBarButtonItem!
     
     // MARK: - Variables
     
     let alarmsArray = [String]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var textArrayData = UserDefaults.standard.array(forKey: "textArr")
+    var imageArrayData = UserDefaults.standard.array(forKey: "imageArr")
     
     // MARK: - Configure view
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true;
+        navigationController?.navigationBar.prefersLargeTitles = false
+        mainCvc.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadCollectionView), name: Notification.Name("viewDismissed"), object: nil)
     }
     
+    @objc func reloadCollectionView() {
+        mainCvc.reloadData()
+        print(appDelegate.imageArray.count)
+    }
+    
+    
     @IBAction func addAction(_ sender: Any) {
-        let alertController = UIAlertController(title: "Alert", message: "Message", preferredStyle: .alert)
-        let addAction = UIAlertAction(title: "Add", style: .default) { _ in
-            print("added")
+        
+    }
+    
+    func doTheThings(index: UIImage) {
+        let data = UserDefaults.standard.array(forKey: "textArr")
+        if data != nil {
+            var mainData = data as! [UIImage]
+            if mainData.contains(index) == false {
+                mainData.append(index)
+            }
+            imageArrayData = mainData
+            UserDefaults.standard.set(mainData, forKey: "textArr")
+            mainCvc.reloadData()
+        } else {
+            imageArrayData = [index]
+            UserDefaults.standard.set([index], forKey: "textArr")
+            mainCvc.reloadData()
         }
-        alertController.addTextField { (textField) in
-            print(textField.text!)
-        }
-        alertController.addAction(addAction)
-        present(alertController, animated: true)
     }
 }
 
@@ -45,12 +65,14 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return appDelegate.imageArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let mainCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath)
-        mainCell.backgroundColor = .systemRed
+        let mainCell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! MainCollectionViewCell
+
+        mainCell.collectionImageView.image = appDelegate.imageArray[indexPath.row]
+        
         return mainCell
     }
     
@@ -63,5 +85,4 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
         let size = CGSize(width: width, height: width)
         return size
     }
-    
 }
